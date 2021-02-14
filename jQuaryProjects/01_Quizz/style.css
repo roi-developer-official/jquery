@@ -1,0 +1,43 @@
+body{
+    background:orange;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size : 1.3rem;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    background: rgb(14, 89, 114);
+    width:70%;
+    margin: auto;
+    padding:0.5rem 1.5rem;
+    position: relative;
+ 
+}
+
+header{
+    text-align: start;
+    border-bottom: #fff dashed 1px;
+}
+
+button{
+    position: relative;
+    margin:1rem;
+    padding :1rem 2rem;
+    left:40%;
+    border :none;
+    color:green;
+    background:lightblue;
+    cursor: pointer;
+}
+#results h3{
+    background:#f06226;
+    padding:10px;
+    margin : 10px 0;
+}
+
+#results span{
+    color:black;
+    font-weight: bold;
+}

@@ -1,0 +1,93 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6em;
+    color:#666;
+    background: #e1e1e1 url(./img/creampaper.png);
+    font-size:0.9rem;
+}
+a{
+    color:#333;
+    text-decoration: none;
+}
+
+.container{
+    width:740px;
+    background:#fff;
+    margin:auto
+}
+
+.clearfix{
+    clear: both;
+}
+
+header{
+    padding: 30px 20px;
+    background:#f4f4f4; 
+}
+
+header h1{
+    color:#000;
+    margin-bottom: 5px;;
+}
+header span{
+    color:#dd2826;
+}
+
+section{
+    padding:30px 20px 20px 20px;
+}
+
+footer{
+    padding:20px;
+    background: #f3f3f3;
+    text-align: center;
+}
+
+#search-form{
+    display:block;
+    margin-bottom: 15px;
+}
+
+.field-container{
+    display: block;
+    position: relative;
+    width:90%;
+    margin:auto;
+}
+
+#search-btn:hover{
+    filter: opacity(.9);
+
+}
+
+.search-field{
+    box-sizing: border-box;
+    display: block;
+    width:45%;
+    padding:11px 7px;
+    padding-right: 43px;
+    background:#fff;
+    color:#ccc;
+    border : 1px solid #c8c8c8;
+    font-size: 1.6rem;
+    opacity: 0.65;
+    border-bottom: #d2e2e7;
+    border-radius: 1px;
+ 
+}
+
+#search-btn{
+    position: absolute;
+    right:360px;
+    top:10px;
+    width:32px;
+    height:32px;
+    background: transparent url(./img/search.png) top left no-repeat;
+    border:none;
+
+}

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Jquary Crash Course</h1>
+    </header>
+
+    <div class="container">
+   
+        <h1 id=heading1>Heading1</h1>
+        <p id=para1>
+            Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Qui
+            assumenda quos quia perferendis
+            velit culpa illum suscipit
+            voluptatem molestias similique
+            provident animi nulla, quae
+            cupiditate, ab rem error vitae
+            expedita.
+        </p>
+        <h1 id=heading2>Heading2</h1>
+        <p id=para2>
+            Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Qui
+            assumenda quos quia perferendis
+            velit culpa illum <span>
+                voluptatem molestias similique
+                provident animi nulla, quae</span>
+            cupiditate, ab rem error vitae
+            expedita.
+        </p>
+ 
+
+        <ul class="list">
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+            <li>List Item</li>
+        </ul>
+        <div id="container1i">
+
+            <input type="button" value="Button1">
+            <input type="submit" value="Button1">
+            <a href="glogloe">GloGloe</a>
+            <input type="text">
+        </div>
+        <p class="nr">1<p>
+    </div>
+    <div class="container2">
+        <h3>Mouse Event</h3>
+        <button id="btn1">Button 1</button>
+        <button id="btn2">Button 2</button>
+        <p>Lorem ipsum dolor sit amet, <span> adipisicing elit. Mollitia illo</span> ex, eaque exercitationem
+            corporis
+            incidunt provident minima magni quos quas consectetur! Reprehenderit, accusantium sequi! Aut, fuga. Enim
+            molestias accusamus voluptatem.</p>
+        <h1 id=coords></h1>
+        <p class="nr">2<p>
+    </div>
+
+
+
+    <div class="container3">
+        <h3>Form</h3>
+        <form id="form">
+            <label for="name">Name</label></br>
+            <input type="text" id="name" name="name">
+            </br>
+            <label for="email">email</label></br>
+            <input type="text" id="email" name="email">
+            </br>
+            <labal>Gender</labal></br>
+            <select name="gender" id="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+        <p class="nr">3<p>
+    </div>
+
+
+
+    <div class="container4">
+        <div>
+        <input id="ul-input" type="text">
+        <ul id="items">
+            <li>list Item1</li>
+            <li>list Item2</li>
+            <li>list Item3</li>
+            <li>list Item4</li>
+        </ul>
+
+        <button class="btn3">Button</button>
+    </div>
+
+        <div id="container4i">
+        <p class="para3">pharagraph 1</p>
+        <p class="para4">pharagraph 2</p>
+        <div class="mydiv"></div>
+        <a id="google" href="https://www.google.com">Goggle</a>
+    </div>
+    <p class="nr">4<p>
+
+    </div>
+
+
+    <div class="container5">
+        <div class='fade'>
+            <h2>Fade animation</h2>
+            <div class="fade-buttons">
+                <button id="fadeOut">fade out</button>
+                <button id="fadeIn">fade in</button>
+                <button id="fadeToggle">fade toggle</button>
+            </div>
+            <div id="box1">
+                <h3>hello world</h3>
+            </div>
+        </div>
+
+        <div class='slide'>
+            <h2>slide animation</h2>
+            <div class="slide-buttons">
+                <button id="slideUp">slide up</button>
+                <button id="slideDown">slide down</button>
+                <button id="slideToggle">slide toggle</button>
+                <button id="stopslide">stop slide</button>
+            </div>
+            <div id="box2">
+                <h3>hello world</h3>
+            </div>
+            <div class='move'>
+                <h2>move animation</h2>
+                <div class="move-buttons">
+                    <button id="moveLeft">move left</button>
+                    <button id="moveRight">move right</button>
+                    <button id="moveAround">move around</button>
+                </div>
+                <div id="box3">
+                    <h3>hello world</h3>
+                </div>
+            </div>
+        </div>
+        <p class="nr">5<p>
+    </div>
+
+    <div class="container6">
+        <ul id="users">
+        </ul>
+        <form id="post-form" action="https://jsonplaceholder.typicode.com/posts">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" placeholder="Title">
+            <label for="body">Body</label>
+            <textarea name="body" placeholder="body" id="body" cols="30" rows="10"></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="result"></div>
+        <p class="nr">6<p>
+    </div>
+
+
+    <script>
+        // First Div
+        $('h1#heading2').click(function () {
+            $('h1#heading2').slideToggle();
+        })
+        $('p span').css('color', 'blue');
+
+        $('ul.list li:even').css('color', 'green');
+        $('ul.list li:odd').css('color', 'gray');
+        $('ul.list li:nth-child(2n)').css('list-style', 'none'); // Effects every second child same as even or Odd , Note we can use nth-child(2) with just number
+
+
+        $(':button').css('padding', '1rem');
+        // one Way
+        $('[href]').css({ color: 'lightblue', margin: '5rem' });
+        // second Way
+        // $('a[href=glogloe]').css('color' ,'lightgray');
+
+
+        // Second Div Buttoms Event:
+        $('#btn1').dblclick(function () {
+            console.log('double Click');
+        })
+
+        $('#btn1').on('mouseenter', function (e) {
+            // you can Lookup for all The mouse event
+            console.log(e.currentTarget);
+            console.log(e.currentTarget.outerHTML);
+            $('.container2 p span').hide();
+
+        })
+
+        $('#btn1').on('mouseleave', function () {
+            $('.container2 p span').show();
+        })
+
+        $('#btn2').on('mousemove', function (e) {
+            console.log('Chords Y:' + e.clientY);
+            let color = '#'
+            for (let i = 0; i < 6; i++) {
+                let num = Math.random();
+                color += Math.floor(num * 10);
+            }
+            $('.container2 p span').css('color', `${color}`);
+        })
+
+        $(document).on('mousemove', function (e) {
+            $('#coords').text('choordX: ' + e.clientX + 'choordY: ' + e.clientY)
+
+        })
+
+        // third Div input Event:
+
+        $('input#name').focus(function (e) {
+            console.log(e.currentTarget);
+            console.log('focused');
+            $(this).css('border', '1px solid blue');
+            $(this).css('background', 'orange');
+        })
+        $('input#name').blur(function () {
+            console.log('focused');
+            $(this).css('background', 'white');
+        })
+
+        $('select#gender').change(function (e) {
+            alert('gender changed to: ' + e.target.value);
+        })
+
+        $('#form').submit(function (e) {
+            e.preventDefault();
+            var name = $('input#name').val();
+            console.log('submitted ' + name);
+        })
+
+        // fourth div
+        $('ul#items').append('<li>Appended Child </li>');
+        $('ul#items').prepend('<li>Prepended Child </li>');
+
+        $('.para3').appendTo('ul#items');
+        // $('.para3').prependTo('ul');
+
+        // $('ul').empty(); // clear The ul 
+        // $('ul').detach(); //detach from the dom
+        $('#google').attr('target', '_blank');
+        console.log($('#google').attr('href'));
+
+        // $('.container4 p').wrap('<h1>');
+        // $('.container4 p').wrapAll('<h1>');
+        $('#ul-input').keyup(function (e) {
+            var code = e.which;
+            console.log(code)
+            if (code == 13) {
+                e.preventDefault();
+                $('ul').append('<li>' + e.target.value + '</li>');
+            }
+        });
+
+        var myArr = ['Brad', 'Kelley', 'Nate', 'Jose'];
+        $.each(myArr, function (i, val) {
+        });
+
+
+        var newArray = $('ul li').toArray();
+        console.log(newArray);
+
+
+        // Fifth div:
+        // fade animation:
+        $('#fadeOut').click(function () {
+            $('#box1').fadeOut('medium')
+        })
+        $('#fadeIn').click(function () {
+            $('#box1').fadeIn('medium')
+        })
+
+        $('#fadeToggle').click(function () {
+            $('#box1').fadeToggle('slow');
+        })
+
+
+        // slide animation:
+        $('#slideUp').click(function () {
+            $('#box2').slideToggle('medium')
+        })
+        $('#slideDown').click(function () {
+            $('#box2').slideDown('medium')
+        })
+
+        $('#slideToggle').click(function () {
+            $('#box2').slideToggle('slow');
+        })
+        $('#stopslide').click(function () {
+            $("#box2").stop();
+        })
+
+
+        // move Animation:
+        $("#moveLeft").click(function () {
+            $('#box3').animate({
+                right: 300,
+                width: '20rem',
+                opacity: 0.5
+            });
+        })
+        $("#moveRight").click(function () {
+            $('#box3').animate({
+                right: 0,
+                width: '5rem',
+                opacity: 1
+            });
+        })
+
+        $('#moveAround').click(function () {
+            var box = $('#box3');
+            box.animate({
+                left: 300
+            });
+            box.animate({
+                top: 300
+            });
+            box.animate({
+                top: 300,
+                left: 0
+            });
+            box.animate({
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0
+            });
+        })
+
+
+        // Seventh Div:
+        // Ajax Req
+        // One way:
+        // $('#result').load('test.html',function(res, status, xhr){
+        //     console.log(xhr)
+        //     if(status== 'success'){
+        //         console.log('success');
+        //     }
+        //     else if(status == 'error')
+        //     console.log(xhr.status)
+        // });
+
+        // Second Way:
+        $.get('test.html', function (data) {
+            $('#result').html(data);
+        })
+
+
+        $.getJSON('json.json', function (data) {
+            $.each(data, function (i, user) {
+                $('#users').append('<li>' + user.firstName + '</li>');
+            })
+        });
+
+        $.ajax({
+            method: 'GET',
+            url: 'https://jsonplaceholder.typicode.com/posts',
+            dataType: 'json'
+        }).done(function (data) {
+            $.map(data, function (post, i) {
+                $('#result').append('<h3>' + post.title + '</h3>');
+            })
+
+        })
+
+        $('#post-form').submit(function (e) {
+            e.preventDefault();
+
+            var title = $('#title').val();
+            var body = $('#body').val();
+            var url = $(this).attr('action');
+            $.post(url, { title: title, body: body })
+                .done(function (data) {
+                    console.log('data', data);
+                })
+        })
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Simple Javascript Quizz</h1>
+            <p>test your knowledge in javascript</p>
+        </header>
+        <section>
+            <div id="results"></div>
+            <form class="quizform" onsubmit="return submitAnswers()">
+                <h3>1. in which HTML element we put in javascript code?</h3>
+                <input type="radio" name="q1" value="a" id="q1a">a. &lt;js&gt;</input></br>
+                <input type="radio" name="q1" value="b" id="q1b">b. &lt;script&gt;</input></br>
+                <input type="radio" name="q1" value="c" id="q1c">c. &lt;body&gt;</input></br>
+                <input type="radio" name="q1" value="d" id="q1d">d. &lt;link&gt;</input>
+                <h3>2. which HTML attribute is used to reference an external javascript file?</h3>
+                <input type="radio" name="q2" value="a" id="q2a">a. src</input></br>
+                <input type="radio" name="q2" value="b" id="q2b">b. rel</input></br>
+                <input type="radio" name="q2" value="c" id="q2c">c. type</input></br>
+                <input type="radio" name="q2" value="d" id="q2d">d. href</input>
+                <h3>3. how would you write Hello in the alert box?</h3>
+                <input type="radio" name="q3" value="a" id="q3a">a. msg("hello")</input></br>
+                <input type="radio" name="q3" value="b" id="q3b">b. alertBox("hello")</input></br>
+                <input type="radio" name="q3" value="c" id="q3c">c. document.write("hello")</input></br>
+                <input type="radio" name="q3" value="d" id="q3d">d. alert("hello")</input>
+                <h3>4. javascript is directly related to the "JAVA" programmig language?</h3>
+                <input type="radio" name="q4" value="a" id="q4a">a. true</input></br>
+                <input type="radio" name="q4" value="b" id="q4b">b. false</input></br>
+                <h3>5. a variable in javascript must start with special character</h3>
+                <input type="radio" name="q5" value="a" id="q5a">a. @</input></br>
+                <input type="radio" name="q5" value="b" id="q5b">b. $</input></br>
+                <input type="radio" name="q5" value="c" id="q5c">c. #</input></br>
+                <input type="radio" name="q5" value="d" id="q5d">d. no special character</input></br>
+                <button type="submit" value="submit Answers">Submit Answers</button>
+            </form>
+        </section>
+        <footer>
+            <p>Copyright &copy; 2020</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

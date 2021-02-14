@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="h1a" class="class">jQuary</h1>
+    <h2>Just Header</h2>
+    <ul>
+        <li>Golden Retriever</li>
+        <li>Sybrien Husky</li>
+        <li>Boxer</li>
+    </ul>
+
+    <div class="puppers">
+        <button id="toggle-show">Toggle Show</button>
+        <img src="../images/pexels-caio-69371.jpg" alt="">
+        <img src="../images/pexels-chevanon-photography-1108099.jpg" alt="">
+        <img src="../images/pexels-helena-lopes-1938123.jpg" alt="">
+    </div>
+    <input type="text" id="sometext" value="">
+    <button id='change-border'>Change border</button>
+
+
+    <div class="fading">
+        <button class="fade">Toggle Fade</button>
+        <div id='box1' style="width:10rem; height:10rem ; display:none"></div>
+        <button class="slideup">Slide Up</button>
+        <button class="slidedown">Slide Down</button>
+        <div id='box2' style="width:10rem; height:10rem; background:orange"></div>
+    </div>
+
+
+    <div style="background:green; width:10rem;height:10rem;" id="drag">
+        <p>Drag Me Around</p>
+    </div>
+    <div style="background:blue; width:20rem; height: 20rem;" id="drop">
+        <p>Drop Here</p>
+    </div>
+
+    <script>
+
+        let design = {
+            color: "blue",
+            background: "green",
+            border: "2px solid black"
+        }
+
+        // jQuary Selectors
+
+        $(document).ready(function () {
+            $('#change-border').click(function () {
+                console.log('Value: ' + $('#sometext').val());
+                $('img').toggleClass('styleClass'); // We have Remove and Add Class
+            })
+        }); // Will Execute Last After All The Scrips Are Loaded
+        //The Buttom Alert The Input Content
+
+        // And A ShortCut : 
+        // $(function(){
+              
+        // })
+
+        $('h1').css("color", "red");
+        $('h1').css("background-color", "blue");
+
+        $('ul').before('<h2>Before -- My Favorite Dogs </h2>'); //Add Before The Element Also We Have After
+
+        $('h2').css(design);
+
+        console.log($('li').text());  //get Every li Text
+        console.log($('li:first').text()); // Get The Text of The first
+
+
+        $('li:first').text('chANGEDText'); //Change The TExt
+
+        console.log($('ul').html());
+        //    Output : 
+        // <li>Golden Retriever</li>
+        // <li>Sybrien Husky</li>
+        // <li>Boxer</li>
+
+        $('li:last').html('<li>German Shaperd</li>'); //Change The Property
+
+        $('img').attr('border', '5px silod black');
+
+
+
+        // jQuary Events:
+        $('img').click(function(){
+            $(this).hide(2000); //We Also have show And also toggle
+        });
+
+
+
+
+
+
+        // Attach More Than One Event: 
+        $('input').on('keyup focus', function(Event){ // add Few Events With On, Note: keyup will give the updated input value!!
+            $('input').toggleClass('styleClass');
+            console.log(Event.target.value + '<--same-->' + $('input').val());
+            $('h1').text(Event.target.value);
+        });
+
+        $('#toggle-show').click(function(){
+            $('img').toggle(2000 , function(){
+               console.log(' ' + 'togglefinished') ;
+            }); // duration on 2000 ms And A Function That Will Execute Whem The Toggle is Done, Note That the console loggin 3 Times each For every Image!!
+        });
+
+        $('.fade').click(function(){
+            $('#box2').fadeToggle('slow',function(){
+                console.log('toggle-fade-finished')
+            });
+        });
+
+
+        $('.slidedown').click(function(){
+            $('#box1').slideToggle();
+        });
+        
+        $('.slideup').click(function(){
+            $('#box2').slideToggle();
+        });
+
+
+        // jQuary Ui:
+        $('#drag').draggable(); // The Div Will Be Draggable
+        $('#drop').dropabble();
+
+
+        // Date Picker:
+        $('#date').datepicker();
+
+
+
+
+
+
+    </script>
+    <style>
+        .styleClass {
+            border: 5px solid green;
+        }
+
+        body{
+            padding: 0;
+            margin:0;
+            box-sizing: border-box;
+            width:100%;
+            max-height:100%;
+            position: absolute;
+        }
+
+
+
+        .fading{
+            border: 3px solid blue;
+            height: 30%;
+            width:30%;
+            position: relative;
+            top:20%;
+            right:-60%;
+            translate : transform(50%, 50%) ;
+            
+        }
+        
+        #box1{
+            position: absolute;;
+            background:lightblue;   
+            position: absolute;
+            left:0rem;
+            top:0rem;
+            
+        }
+        #box2{
+            background:lightslategray;
+            position: absolute;
+            right:0rem;
+            top:0rem;
+        }
+        .date{
+            position: absolute;
+            right:20;
+            bottom:10rem;
+        }
+    </style>
+</body>
+
+</html>
